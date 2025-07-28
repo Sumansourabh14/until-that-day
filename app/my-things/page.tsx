@@ -5,6 +5,7 @@ import { ItemProps } from "@/types";
 import Link from "next/link";
 
 const MyThings = () => {
+  if (typeof window === "undefined") return null;
   const items = localStorage.getItem("items");
   const itemsParsed = items ? JSON.parse(items) : [];
 
