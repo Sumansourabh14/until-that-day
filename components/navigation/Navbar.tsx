@@ -9,7 +9,7 @@ import { menuOptions, SITE_METADATA } from "@/data/constants";
 
 const Navbar = () => {
   return (
-    <NavigationMenu className="backdrop-blur-md bg-white/5 border border-white/10 text-white shadow-md rounded-xl px-6 py-4 max-w-[1440px] mx-auto mt-4 flex flex-wrap items-center justify-between">
+    <NavigationMenu className="font-sans backdrop-blur-md bg-white/5 border border-white/10 text-white shadow-md rounded-xl px-6 py-4 max-w-[1440px] mx-auto mt-4 flex flex-wrap items-center justify-between">
       <section>
         <Link
           href={`/`}

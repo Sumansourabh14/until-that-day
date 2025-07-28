@@ -22,9 +22,9 @@ const ThingPage = ({ params }: Props) => {
   return (
     <main className="font-sans flex items-center justify-center px-8 py-20 lg:py-40">
       <div className="max-w-6xl w-full rounded-xl shadow-md p-6 mx-auto space-y-4">
-        <div className="flex gap-16 items-center">
+        <div className="flex gap-16 items-center flex-col md:flex-row">
           <div className="text-center flex-1/2">
-            <h1 className="text-9xl font-bold">{daysLeft}</h1>
+            <h1 className="text-8xl sm:text-9xl font-bold">{daysLeft}</h1>
             <p className="text-xl">days to go</p>
           </div>
           <div className="space-y-4">
