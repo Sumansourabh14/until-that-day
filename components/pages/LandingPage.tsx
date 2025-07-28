@@ -13,7 +13,7 @@ export default function LandingPage() {
           you.
         </p>
         <div className="mt-8">
-          <Link href="/app">
+          <Link href="/thing">
             <Button size="lg">Start Your Countdown →</Button>
           </Link>
         </div>
