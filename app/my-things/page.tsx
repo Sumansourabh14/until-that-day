@@ -10,7 +10,7 @@ const MyThings = () => {
   const itemsParsed = items ? JSON.parse(items) : [];
 
   return (
-    <section className="max-w-[1500px] mx-auto py-14 px-8">
+    <section className="max-w-[1500px] mx-auto pt-14 px-8 pb-40">
       <h1 className="text-5xl font-bold text-center mb-20">My Things</h1>
 
       {itemsParsed.length === 0 && (

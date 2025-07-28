@@ -50,7 +50,7 @@ export default function Thing() {
   }, []);
 
   return (
-    <section className="min-h-screen px-8 py-20 flex flex-col items-center">
+    <section className="px-8 pt-20 flex flex-col items-center pb-40">
       <h1 className="text-5xl font-bold text-center mb-20">Buy that thing</h1>
 
       <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
