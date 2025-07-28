@@ -1,7 +1,6 @@
 "use client";
 
 import ItemCard from "@/components/cards/ItemCard";
-import { Button } from "@/components/ui/button";
 import { ItemProps } from "@/types";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ const MyThings = () => {
   const itemsParsed = items ? JSON.parse(items) : [];
 
   return (
-    <section className="max-w-[1500px] mx-auto pt-14 px-8 pb-40">
+    <section className="font-sans max-w-[1500px] mx-auto pt-14 px-8 pb-40">
       <h1 className="text-5xl font-bold text-center mb-20">My Things</h1>
 
       {itemsParsed.length === 0 && (
