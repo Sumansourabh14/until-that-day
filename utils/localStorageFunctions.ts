@@ -1,6 +1,7 @@
 import { ItemProps } from "@/types";
 
 export const addItemsToLocalStorage = (items: ItemProps[]) => {
+  if (typeof window === "undefined") return null;
   localStorage.setItem("items", JSON.stringify(items));
 };
 
@@ -10,6 +11,8 @@ export const addItemToLocalStorage = ({
   deadline,
   imageUrl,
 }: ItemProps) => {
+  if (typeof window === "undefined") return null;
+
   const item = {
     id,
     title,
