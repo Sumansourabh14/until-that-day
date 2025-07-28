@@ -28,13 +28,16 @@ const MyThings = () => {
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        {itemsParsed.map((item: ItemProps, index: number) => (
-          <ItemCard
-            key={index}
-            title={item.title}
-            deadline={item.deadline}
-            imageUrl={item.imageUrl}
-          />
+        {itemsParsed.map((item: ItemProps) => (
+          <Link key={item.id} href={`/my-things/${item.id}`}>
+            <ItemCard
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              deadline={item.deadline}
+              imageUrl={item.imageUrl}
+            />
+          </Link>
         ))}
       </div>
     </section>

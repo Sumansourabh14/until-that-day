@@ -5,11 +5,13 @@ export const addItemsToLocalStorage = (items: ItemProps[]) => {
 };
 
 export const addItemToLocalStorage = ({
+  id,
   title,
   deadline,
   imageUrl,
 }: ItemProps) => {
   const item = {
+    id,
     title,
     deadline,
     imageUrl,

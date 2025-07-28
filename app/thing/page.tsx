@@ -28,12 +28,12 @@ export default function Thing() {
       reader.onload = () => {
         const result = reader.result as string;
 
-        const newItem = { title, deadline, imageUrl: result };
+        const newItem = { id: Date.now(), title, deadline, imageUrl: result };
         addItems(newItem);
       };
       reader.readAsDataURL(image);
     } else {
-      const newItem = { title, deadline };
+      const newItem = { id: Date.now(), title, deadline };
       addItems(newItem);
     }
 
