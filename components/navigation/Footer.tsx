@@ -27,7 +27,7 @@ const Footer = () => {
         </NavigationMenuList>
       </NavigationMenu>
       <section className="text-center mt-20">
-        <p className="font-bold tracking-tighter text-6xl sm:text-7xl lg:text-[9rem] xl:text-[11rem] 2xl:text-[15rem]">
+        <p className="font-sans font-bold tracking-tighter text-6xl sm:text-7xl lg:text-[9rem] xl:text-[11rem] 2xl:text-[15rem]">
           {SITE_METADATA.title}
         </p>
       </section>

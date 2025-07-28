@@ -9,7 +9,7 @@ export const menuOptions = [
     destination: "/my-things",
   },
   {
-    title: "Add a thing",
+    title: "Add thing",
     destination: "/thing",
   },
 ];

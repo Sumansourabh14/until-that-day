@@ -19,3 +19,17 @@ export const addItemToLocalStorage = ({
 
   localStorage.setItem("item", JSON.stringify(item));
 };
+
+export const getItemFromLocalStorage = (id: number) => {
+  const itemsStringified = localStorage.getItem("items");
+
+  if (!itemsStringified) return null;
+
+  try {
+    const items = JSON.parse(itemsStringified);
+    return items.find((item: ItemProps) => item.id === id) || null;
+  } catch (error) {
+    console.error("Failed to parse items:", error);
+    return null;
+  }
+};
