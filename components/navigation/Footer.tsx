@@ -31,7 +31,10 @@ const Footer = () => {
           {SITE_METADATA.title}
         </p>
       </section>
-      <Separator className="mt-6" />
+      <Separator className="my-6" />
+      <p className="text-center text-muted-foreground">
+        Built with ❤️ by Suman Sourabh
+      </p>
     </footer>
   );
 };
