@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 export default function LandingPage() {
   return (
     <section>
-      {/* Hero */}
       <section className="py-20 lg:py-32 text-center px-8">
         <h1 className="max-w-3xl text-5xl lg:text-8xl font-bold mb-4 mx-auto">
           Waiting never felt better.
@@ -22,25 +21,29 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Features */}
       <section className="py-36 px-8 bg-zinc-900">
         <div className="max-w-4xl mx-auto grid gap-12 md:grid-cols-3 text-center">
           <div>
-            <h3 className="text-xl font-semibold mb-2">🎯 Focused Goals</h3>
-            <p>Give your future buy a name and deadline to stay intentional.</p>
+            <h3 className="text-xl font-semibold mb-6">Focused Goals</h3>
+            <p>
+              Give your next purchase a name and a date. Simple, clear,
+              motivating
+            </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">🖼️ Visual Reminder</h3>
-            <p>Upload an optional image to keep the item in your mind.</p>
+            <h3 className="text-xl font-semibold mb-6">Visual Reminder</h3>
+            <p>
+              Add a picture of what you want & get a little nudge every time you
+              check in
+            </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">⏳ Countdown Magic</h3>
-            <p>See how many days left in bold, motivating typography.</p>
+            <h3 className="text-xl font-semibold mb-6">Countdown Magic</h3>
+            <p>Watch the days tick down and feel the excitement build</p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-28 px-8 text-center">
         <h2 className="text-3xl font-bold mb-4">
           Start your first countdown now
