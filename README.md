@@ -1,5 +1,7 @@
 # 🛍️ Until That Day
 
+![alt text](image.png)
+
 **Tired of impulse purchases? Want to stay excited about what really matters?**  
 **Until That Day** helps you delay gratification and track things you're planning to buy.  
 Set a goal, attach a photo, and watch the countdown keep you motivated.
