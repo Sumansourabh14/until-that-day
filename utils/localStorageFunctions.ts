@@ -21,6 +21,8 @@ export const addItemToLocalStorage = ({
 };
 
 export const getItemFromLocalStorage = (id: number) => {
+  if (typeof window === "undefined") return null;
+
   const itemsStringified = localStorage.getItem("items");
 
   if (!itemsStringified) return null;
