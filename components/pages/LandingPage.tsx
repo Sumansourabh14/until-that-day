@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function LandingPage() {
   return (
     <section>
-      <section className="py-20 lg:py-32 text-center px-8">
+      <section className="py-16 lg:py-28 text-center px-8">
         <h1 className="max-w-3xl text-5xl lg:text-8xl font-bold mb-4 mx-auto">
           Waiting never felt better.
         </h1>
@@ -21,26 +21,30 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-36 px-8 bg-zinc-900">
-        <div className="max-w-4xl mx-auto grid gap-12 md:grid-cols-3 text-center">
-          <div>
-            <h3 className="text-xl font-semibold mb-6">Focused Goals</h3>
-            <p>
-              Give your next purchase a name and a date. Simple, clear,
-              motivating
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-6">Visual Reminder</h3>
-            <p>
-              Add a picture of what you want & get a little nudge every time you
-              check in
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-6">Countdown Magic</h3>
-            <p>Watch the days tick down and feel the excitement build</p>
-          </div>
+      <section className="py-24 px-8 bg-zinc-900 text-white">
+        <div className="max-w-4xl mx-auto grid gap-16 md:grid-cols-3 text-center">
+          {[
+            {
+              title: "Focused Goals",
+              text: "Give your next purchase a name and a date. Simple, clear, motivating",
+            },
+            {
+              title: "Visual Reminder",
+              text: "Add a picture of what you want & get a little nudge every time you check in",
+            },
+            {
+              title: "Countdown Magic",
+              text: "Watch the days tick down and feel the excitement build",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-black border shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl p-6 flex flex-col gap-4"
+            >
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="text-muted-foreground">{item.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
