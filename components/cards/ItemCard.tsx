@@ -10,7 +10,13 @@ const ItemCard = ({ title, deadline, imageUrl }: ItemProps) => {
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">
           {title}
         </h2>
-        <p className="text-sm text-muted-foreground">{daysLeft} to go</p>
+        <p className="text-sm text-muted-foreground">
+          {daysLeft != 0
+            ? "This is it! The day has finally arrived."
+            : daysLeft > 1
+            ? daysLeft + " days to go"
+            : daysLeft + " day "}
+        </p>
       </div>
 
       {imageUrl && (
