@@ -18,7 +18,7 @@ const MyThings = () => {
           <p className="text-lg">Nothing has been added yet!</p>
           <div className="mt-12">
             <Link
-              href="/thing"
+              href="/add-thing"
               className="cursor-pointer bg-zinc-700 hover:bg-zinc-800 px-10 py-4 rounded-md font-bold"
             >
               Add now!

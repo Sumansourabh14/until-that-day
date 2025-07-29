@@ -13,7 +13,7 @@ export default function LandingPage() {
           watch the countdown motivate you.
         </p>
         <div className="mt-8">
-          <Link href="/thing">
+          <Link href="/add-thing">
             <Button size="lg" className="cursor-pointer px-8 font-bold py-6">
               What do you wanna buy?
             </Button>
@@ -53,7 +53,7 @@ export default function LandingPage() {
           Start your first countdown now
         </h2>
         <p className="mb-6">No login required.</p>
-        <Link href="/thing">
+        <Link href="/add-thing">
           <Button size="lg" className="cursor-pointer">
             Add That Thing
           </Button>

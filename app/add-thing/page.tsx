@@ -5,8 +5,9 @@ import { Input } from "@/components/ui/input";
 import { ItemProps } from "@/types";
 import { addItemsToLocalStorage } from "@/utils/localStorageFunctions";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
-export default function Thing() {
+export default function AddThing() {
   const [title, setTitle] = useState<string>("");
   const [deadline, setDeadline] = useState<string>("");
   const [image, setImage] = useState<File | null>(null);
@@ -32,9 +33,11 @@ export default function Thing() {
         addItems(newItem);
       };
       reader.readAsDataURL(image);
+      toast("Great! Your stuff has been added.");
     } else {
       const newItem = { id: Date.now(), title, deadline };
       addItems(newItem);
+      toast("Great! Your stuff has been added.");
     }
 
     setTitle("");
@@ -50,31 +53,43 @@ export default function Thing() {
   }, []);
 
   return (
-    <section className="font-sans px-8 pt-20 flex flex-col items-center pb-40">
-      <h1 className="text-5xl font-bold text-center mb-20">Buy that thing</h1>
+    <section className="font-sans px-8 pt-12 flex flex-col items-center pb-30">
+      <h1 className="text-5xl font-bold text-center">Add Stuff</h1>
+      <p className="text-muted-foreground mt-4">
+        Have a stuff to buy in your mind? Add it here.
+      </p>
 
-      <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
-        <Input
-          type="text"
-          placeholder="What do you want to buy?"
-          className="w-full p-3 border rounded-md"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <Input
-          type="date"
-          className="w-full p-3 border rounded-md"
-          value={deadline}
-          onChange={(e) => setDeadline(e.target.value)}
-          required
-        />
-        <Input
-          type="file"
-          accept="image/*"
-          onChange={(e) => setImage(e.target.files?.[0] || null)}
-          className="w-full"
-        />
+      <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4 mt-12">
+        <section>
+          <label>Name of item</label>
+          <Input
+            type="text"
+            placeholder="What do you want to buy?"
+            className="w-full p-3 border rounded-md"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </section>
+        <section>
+          <label>Deadline to buy it</label>
+          <Input
+            type="date"
+            className="w-full p-3 border rounded-md"
+            value={deadline}
+            onChange={(e) => setDeadline(e.target.value)}
+            required
+          />
+        </section>
+        <section>
+          <label>Add image</label>
+          <Input
+            type="file"
+            accept="image/*"
+            onChange={(e) => setImage(e.target.files?.[0] || null)}
+            className="w-full"
+          />
+        </section>
         {image && (
           <img
             src={URL.createObjectURL(image)}
@@ -82,8 +97,11 @@ export default function Thing() {
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto rounded-md shadow"
           />
         )}
-        <Button type="submit" className="w-full py-3 rounded-md cursor-pointer">
-          Add thing
+        <Button
+          type="submit"
+          className="w-full py-6 text-lg mt-4 rounded-md font-bold cursor-pointer"
+        >
+          Add Stuff
         </Button>
       </form>
     </section>

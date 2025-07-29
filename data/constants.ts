@@ -10,6 +10,6 @@ export const menuOptions = [
   },
   {
     title: "Add Stuff",
-    destination: "/thing",
+    destination: "/add-thing",
   },
 ];
