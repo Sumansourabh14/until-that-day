@@ -11,7 +11,7 @@ const MyThings = () => {
 
   return (
     <section className="font-sans max-w-[1500px] mx-auto pt-14 px-8 pb-40">
-      <h1 className="text-5xl font-bold text-center mb-20">My Things</h1>
+      <h1 className="text-5xl font-bold text-center mb-20">My Stuff</h1>
 
       {itemsParsed.length === 0 && (
         <div className="text-center">

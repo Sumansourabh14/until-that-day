@@ -5,7 +5,7 @@ export const SITE_METADATA = {
 
 export const menuOptions = [
   {
-    title: "Stuff",
+    title: "My Stuff",
     destination: "/my-things",
   },
   {
