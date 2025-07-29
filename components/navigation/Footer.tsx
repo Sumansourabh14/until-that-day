@@ -1,3 +1,4 @@
+import { menuOptions, SITE_METADATA } from "@/data/constants";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -5,8 +6,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "../ui/navigation-menu";
-import { Separator } from "../ui/separator";
-import { menuOptions, SITE_METADATA } from "@/data/constants";
 
 const Footer = () => {
   return (
@@ -26,13 +25,7 @@ const Footer = () => {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <section className="text-center mt-20">
-        <p className="font-sans font-bold tracking-tighter text-6xl sm:text-7xl lg:text-[9rem] xl:text-[11rem] 2xl:text-[15rem]">
-          {SITE_METADATA.title}
-        </p>
-      </section>
-      <Separator className="my-6" />
-      <p className="text-center text-muted-foreground">
+      <p className="text-center text-muted-foreground text-sm">
         Built with ❤️ by Suman Sourabh
       </p>
     </footer>

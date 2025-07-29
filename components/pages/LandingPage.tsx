@@ -9,12 +9,12 @@ export default function LandingPage() {
           Waiting never felt better.
         </h1>
         <p className="text-lg text-gray-300 max-w-xl mx-auto">
-          Set a deadline, optionally add a photo, and watch the countdown
-          motivate you.
+          Add a stuff you want to buy! Simply set a deadline, add a photo, and
+          watch the countdown motivate you.
         </p>
         <div className="mt-8">
           <Link href="/thing">
-            <Button size="lg" className="cursor-pointer">
+            <Button size="lg" className="cursor-pointer px-8 font-bold py-6">
               What do you wanna buy?
             </Button>
           </Link>
