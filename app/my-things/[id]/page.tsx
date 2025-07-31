@@ -59,7 +59,7 @@ const ThingPage = ({ params }: Props) => {
           ) : (
             <div className="text-center flex-1/2">
               <h1 className="text-8xl sm:text-9xl font-bold">{daysLeft}</h1>
-              <p className="text-xl">days to go</p>
+              <p className="text-xl">{daysLeft === 1 ? "day" : "days"} to go</p>
             </div>
           )}
           <div className="space-y-4">
