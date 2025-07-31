@@ -45,10 +45,23 @@ const ThingPage = ({ params }: Props) => {
     <>
       <section className="font-sans flex items-center justify-center px-8 py-20 max-w-3xl mx-auto">
         <section className="flex gap-16 items-center flex-col md:flex-row">
-          <div className="text-center flex-1/2">
-            <h1 className="text-8xl sm:text-9xl font-bold">{daysLeft}</h1>
-            <p className="text-xl">days to go</p>
-          </div>
+          {daysLeft < 0 ? (
+            <div className="text-center flex-1/2">
+              <h1 className="text-6xl sm:text-7xl font-bold">
+                Did you get it?
+              </h1>
+            </div>
+          ) : daysLeft === 0 ? (
+            <div className="text-center flex-1/2">
+              <h1 className="text-8xl sm:text-9xl font-bold">This is it!</h1>
+              <p className="text-xl">Go buy that thing!</p>
+            </div>
+          ) : (
+            <div className="text-center flex-1/2">
+              <h1 className="text-8xl sm:text-9xl font-bold">{daysLeft}</h1>
+              <p className="text-xl">days to go</p>
+            </div>
+          )}
           <div className="space-y-4">
             <h2 className="text-3xl font-semibold text-muted-foreground">
               {title}
