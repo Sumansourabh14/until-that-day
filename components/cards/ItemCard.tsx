@@ -11,11 +11,13 @@ const ItemCard = ({ title, deadline, imageUrl }: ItemProps) => {
           {title}
         </h2>
         <p className="text-sm text-muted-foreground">
-          {daysLeft === 0
-            ? "This is it! The day has finally arrived."
+          {daysLeft < 0
+            ? "Did you get it?"
+            : daysLeft === 0
+            ? "This is it! Today's the day"
             : daysLeft > 1
             ? daysLeft + " days to go"
-            : daysLeft + " day "}
+            : daysLeft + " day to go"}
         </p>
       </div>
 
